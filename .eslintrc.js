@@ -1,6 +1,5 @@
 module.exports = {
   plugins: [
-    'prettier',
     'react',
     '@typescript-eslint',
     'react-hooks',
@@ -17,7 +16,6 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:import/recommended',
     'plugin:promise/recommended',
-    'plugin:prettier/recommended',
   ],
   env: {
     browser: true,
@@ -34,9 +32,14 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   rules: {
-    // Include .prettierrc.js rules
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     // We will use TypeScript's types for component props instead
     'react/prop-types': 'off',
+    // Allow to add devDependencies
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+      },
+    ],
   },
 };

@@ -24,6 +24,7 @@
     ".eslintrc.js",
     "commitlint.config.js",
     ".huskyrc.js",
+    "craco.config.js",
     "./src/**/*"
   ]
 }
